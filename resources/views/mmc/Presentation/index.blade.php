@@ -15,9 +15,11 @@ $TrackMetadata = $Presentation['TrackMetadata'];
 @endisset
 @isset($TrackMetadata['VideoTrackReferences'])
 @foreach($TrackMetadata['VideoTrackReferences'] as $VideoTrackReference)
+@isset($VideoTrackReference)
 <manifest:VideoTrackReference>
 <manifest:VideoTrackID>{{$VideoTrackReference['VideoTrackID']}}</manifest:VideoTrackID>
 </manifest:VideoTrackReference>
+@endisset
 @endforeach
 @endisset
 @isset($TrackMetadata['AudioTrackReferences'])
